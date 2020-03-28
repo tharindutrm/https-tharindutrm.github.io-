@@ -3,7 +3,11 @@ layout: default
 title: "Oracle Flashback Technology"
 comments: true
 ---
-Oracle Flashback Technology is a group of Oracle Database features that that let you view past states of database objects or to return database objects to a previous state without using point-in-time media recovery.Simply use to recover data from Logical corruptions. Most of the Flashback technologies depend on the **UNDO** data to retrieve older data
+Oracle Flashback Technology is a group of Oracle Database features that that let you view past states of database objects or to return database objects to a previous state without using point-in-time media recovery.Simply use to recover data from Logical corruptions. Most of the Flashback technologies depend on the **UNDO** data to retrieve older data.
+
+
+let's check what are the capabilities and how to perform flashback database operaions.
+
 
 **1. Set Database Parameters**
 
