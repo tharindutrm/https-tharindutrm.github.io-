@@ -100,7 +100,7 @@ ARCHIVELOG 	NO
 **3. Flashback Scenarios**
 
 
-These are the flashback scenario types
+Flashback scenario types
 
 
 - Recover a dropped table (withoud indexes)
