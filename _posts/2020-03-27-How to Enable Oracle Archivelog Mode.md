@@ -6,7 +6,6 @@ title: "How to Enable/Disable Oracle Archivelog Mode"
 {% highlight SHELL %}  
 [oracle@centos7 ~]$ sqlplus / as sysdba
 {% endhighlight %}
-
 {% highlight SQL %}  
 SQL> archive log list
 Database log mode	       No Archive Mode
@@ -17,7 +16,6 @@ Current log sequence	       14
 {% endhighlight %}
 
 ## 2. Shutdown Database and Mount Database
-
 {% highlight SQL %} 
 SQL> shutdown immediate;
 SQL> startup mount;
