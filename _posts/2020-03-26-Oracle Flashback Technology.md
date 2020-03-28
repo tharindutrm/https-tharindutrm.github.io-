@@ -89,15 +89,13 @@ SQL> select log_mode,flashback_on from v$database;
 
 LOG_MODE     FLASHBACK_ON
 ------------ ------------------
-ARCHIVELOG NO
+ARCHIVELOG 	NO
 
 {% endhighlight %}
 
 ## 3. Flashback Scenarios
 
-
 ### 3.1 DROP TABLE
-
 
 Flashback drop is used to restore accidentally dropped tables and depended objects. After restoring the table will be renamed as its original whereas the indexes will have system generated names. 
 
