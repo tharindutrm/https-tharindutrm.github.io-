@@ -104,9 +104,13 @@ Flashback scenario types
 
 
 - Recover a dropped table (withoud indexes)
+
 - Recover a dropped table (with indexes)
+
 - Flashback Version Query
+
 - Flashback Transcation Query
+
 - Flashback Database
 
 
@@ -217,7 +221,7 @@ EMP3			       IND3
 
 This feature helps to view all the versions of all the rows that ever existed in one or more tables in between two points in time or system change numbers (SCN).This feature also depends on **UNDO** data.
 
-Let's update a single table row for several times and then perform flashback)
+Let's update a single table row for several times and then perform flashback.
 
 {% highlight SQL %}
 
