@@ -8,7 +8,7 @@ Use to recover data from Logical corruptions. Most of the Flashback technologies
 
 ## 1. Set Database Parameters ##
 
-- `DB_FLASHBACK_RETENTION_TARGET`
+1.1 DB_FLASHBACK_RETENTION_TARGET
 
 Time limit (in minutes) for the deleted data to be retained.
 
@@ -16,7 +16,7 @@ Time limit (in minutes) for the deleted data to be retained.
 SQL> Alter System Set DB_FLASHBACK_RETENTION_TARGET=4320;
 {% endhighlight %}
  
-- `DB_RECOVERY_FILE_DEST_SIZE`
+1.2 DB_RECOVERY_FILE_DEST_SIZE
 
 Size limit for the maximum data that can be retained.
    
@@ -26,7 +26,7 @@ SQL> Alter System Set DB_RECOVERY_FILE_DEST_SIZE=2G;
 
 {% endhighlight %}
 
-- `DB_RECOVERY_FILE_DEST`
+1.3 DB_RECOVERY_FILE_DEST
 
 Location where the data needs to be retained.
     
