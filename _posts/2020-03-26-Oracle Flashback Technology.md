@@ -8,6 +8,7 @@ Oracle Flashback Technology is a group of Oracle Database features that that let
 
 In this post first we will check what are the database parameters need to be set and how are they configured.Then we will cover what are the capabilities of oracle flashback (scenarios) and how to perform flashback activities. 
 
+
 **1. Set Database Parameters**
 
 
