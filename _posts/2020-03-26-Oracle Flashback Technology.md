@@ -6,7 +6,7 @@ comments: true
 
 Use to recover data from Logical corruptions. Most of the Flashback technologies depend on the **UNDO** data to retrieve older data
 
-## 1. Set Database Parameters ##
+***1. Set Database Parameters***
 
 1.1 DB_FLASHBACK_RETENTION_TARGET
 
@@ -36,7 +36,7 @@ SQL> Alter System Set DB_RECOVERY_FILE_DEST='/Source/File/';
 
 {% endhighlight %}
 
-## 2. Check Database Parameters
+***2. Check Database Parameters***
 
 {% highlight SQL %}
 
@@ -93,7 +93,7 @@ ARCHIVELOG 	NO
 
 {% endhighlight %}
 
-## 3. Flashback Scenarios
+***3. Flashback Scenarios***
 
 ### 3.1 DROP TABLE
 
