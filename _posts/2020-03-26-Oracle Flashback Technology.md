@@ -99,11 +99,15 @@ ARCHIVELOG 	NO
 
 **3. Flashback Scenarios**
 
--Recover dropped table (withoud indexes)
--Recover dropped table (with indexes)
--Flashback Version Query
--Flashback Transcation Query
--Flashback Database
+
+These are the flashback scenario types
+
+
+- Recover dropped table (withoud indexes)
+- Recover dropped table (with indexes)
+- Flashback Version Query
+- Flashback Transcation Query
+- Flashback Database
 
 *3.1 Drop Table*
 
