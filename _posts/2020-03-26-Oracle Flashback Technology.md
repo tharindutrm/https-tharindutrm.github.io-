@@ -103,11 +103,12 @@ ARCHIVELOG 	NO
 These are the flashback scenario types
 
 
-- Recover dropped table (withoud indexes)
-- Recover dropped table (with indexes)
+- Recover a dropped table (withoud indexes)
+- Recover a dropped table (with indexes)
 - Flashback Version Query
 - Flashback Transcation Query
 - Flashback Database
+
 
 *3.1 Drop Table*
 
@@ -122,7 +123,7 @@ SQL> FLASHBACK TABLE EMP2 TO BEFORE DROP;
 
 {% endhighlight %}
 
-*CASE 1. Tabaes Without Indexes*
+*Case 1. Tabaes Without Indexes*
 
 {% highlight SQL %}
 
@@ -167,7 +168,7 @@ SQL> select * from emp2;
 
 {% endhighlight %}
 
-*CASE 2. Tables With Indexes*
+*Case 2. Tables With Indexes*
 
 {% highlight SQL %}
 
@@ -216,7 +217,7 @@ EMP3			       IND3
 
 This feature helps to view all the versions of all the rows that ever existed in one or more tables in between two points in time or system change numbers (SCN).This feature also depends on **UNDO** data.
 
-(Single table row has been updated several times and then flashback)
+Let's update a single table row for several times and then perform flashback)
 
 {% highlight SQL %}
 
