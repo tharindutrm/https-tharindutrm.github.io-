@@ -6,10 +6,10 @@ comments: true
 
 Use to recover data from Logical corruptions. Most of the Flashback technologies depend on the **UNDO** data to retrieve older data
 
-***1. Set Database Parameters***
+**1. Set Database Parameters**
 
 
-1.1 DB_FLASHBACK_RETENTION_TARGET
+*1.1 DB_FLASHBACK_RETENTION_TARGET*
 
 Time limit (in minutes) for the deleted data to be retained.
 
@@ -17,7 +17,7 @@ Time limit (in minutes) for the deleted data to be retained.
 SQL> Alter System Set DB_FLASHBACK_RETENTION_TARGET=4320;
 {% endhighlight %}
  
-1.2 DB_RECOVERY_FILE_DEST_SIZE
+*1.2 DB_RECOVERY_FILE_DEST_SIZE*
 
 Size limit for the maximum data that can be retained.
    
@@ -27,7 +27,7 @@ SQL> Alter System Set DB_RECOVERY_FILE_DEST_SIZE=2G;
 
 {% endhighlight %}
 
-1.3 DB_RECOVERY_FILE_DEST
+*1.3 DB_RECOVERY_FILE_DEST*
 
 Location where the data needs to be retained.
     
@@ -37,7 +37,7 @@ SQL> Alter System Set DB_RECOVERY_FILE_DEST='/Source/File/';
 
 {% endhighlight %}
 
-***2. Check Database Parameters***
+**2. Check Database Parameters**
 
 {% highlight SQL %}
 
@@ -94,9 +94,10 @@ ARCHIVELOG 	NO
 
 {% endhighlight %}
 
-***3. Flashback Scenarios***
+**3. Flashback Scenarios**
 
-### 3.1 DROP TABLE
+*3.1 Drop Table*
+
 
 Flashback drop is used to restore accidentally dropped tables and depended objects. After restoring the table will be renamed as its original whereas the indexes will have system generated names. 
 
@@ -108,7 +109,7 @@ SQL> FLASHBACK TABLE EMP2 TO BEFORE DROP;
 
 {% endhighlight %}
 
-### CASE 1. Tabaes Without Indexes
+*CASE 1. Tabaes Without Indexes*
 
 {% highlight SQL %}
 
@@ -153,7 +154,7 @@ SQL> select * from emp2;
 
 {% endhighlight %}
 
-**CASE 2. Tables With Indexes**
+*CASE 2. Tables With Indexes*
 
 {% highlight SQL %}
 
@@ -197,12 +198,12 @@ EMP3			       IND3
 
 {% endhighlight %}
 
-### 3.2 Oracle Flashback Version Query ###
+*3.2 Oracle Flashback Version Query*
 
 
 This feature helps to view all the versions of all the rows that ever existed in one or more tables in between two points in time or system change numbers (SCN).This feature also depends on **UNDO** data.
 
-(Update a table row several times and flashback)
+(Single table row has been updated several times and then flashback)
 
 {% highlight SQL %}
 
@@ -326,7 +327,7 @@ SQL> select id,salary from emp3 as of timestamp sysdate-interval '1' minute wher
 
 {% endhighlight %}
 
-#### Update multiple rows ####
+*Update multiple rows*
 
 {% highlight SQL %}
 
@@ -402,7 +403,7 @@ SQL> select * from emp3;
 
 {% endhighlight %}
 
-### 3.3 Flashback Transcation Query ###
+*3.3 Flashback Transcation Query*
 
 
 Flashback Transaction query allows viewing changes made by single transaction or all transactions during a period of time.
@@ -524,7 +525,8 @@ SQL> select * from emp3;
 
 {% endhighlight %}
 
-### 3.4 Flashback Database ###
+*3.4 Flashback Database*
+
 
 This feature is used to recover the database from logical corruptions.
 - It is used to perform PITR(point in time recovery) of database. 
@@ -559,7 +561,6 @@ alter database flashback on
 ERROR at line 1:
 ORA-38706: Cannot turn on FLASHBACK DATABASE logging.
 ORA-38707: Media recovery is not enabled.
-
 
 SQL> alter database archivelog;
 
@@ -651,8 +652,7 @@ SQL>
 
 {% endhighlight %}
 
-SCOTT user exists.but U2 is not available.
-Database succesfully completed the flashback operation to given SCN.
+After performing the flashback database operation ,SCOTT user exists.but U2.That means database has been database succesfully completed the flashback operation to given SCN.
 
 
 
