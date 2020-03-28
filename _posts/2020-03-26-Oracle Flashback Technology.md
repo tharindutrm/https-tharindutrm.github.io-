@@ -652,7 +652,7 @@ SQL>
 
 {% endhighlight %}
 
-After performing the flashback database operation ,SCOTT user exists.but U2.That means database has been database succesfully completed the flashback operation to given SCN.
+After performing the flashback database operation ,SCOTT user exists.but U2.That means database has been succesfully completed the flashback operation to given SCN.
 
 
 
